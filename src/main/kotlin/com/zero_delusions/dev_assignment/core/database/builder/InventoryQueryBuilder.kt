@@ -1,4 +1,4 @@
-package com.zero_delusions.dev_assignment.core.database.utils
+package com.zero_delusions.dev_assignment.core.database.builder
 
 import com.zero_delusions.dev_assignment.core.database.table.UserData
 import org.hibernate.Session
