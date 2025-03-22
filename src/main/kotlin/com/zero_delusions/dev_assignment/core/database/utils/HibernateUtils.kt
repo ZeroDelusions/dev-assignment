@@ -1,7 +1,9 @@
 package com.zero_delusions.dev_assignment.core.database.utils
 
 import com.zero_delusions.dev_assignment.core.database.table.UserData
+import org.hibernate.Session
 import org.hibernate.SessionFactory
+import org.hibernate.Transaction
 import org.hibernate.cfg.Configuration
 
 object HibernateUtils {
@@ -19,5 +21,22 @@ object HibernateUtils {
         configuration.setProperty("hibernate.connection.password", password)
 
         return configuration.buildSessionFactory()
+    }
+
+    fun <T> executeWithSession(action: (Session) -> T): T {
+        val session = sessionFactory.openSession()
+        var transaction: Transaction? = null
+
+        try {
+            transaction = session.beginTransaction()
+            val result = action(session)
+            transaction.commit()
+            return result
+        } catch (e: Exception) {
+            transaction?.rollback()
+            throw e
+        } finally {
+            session.close()
+        }
     }
 }
