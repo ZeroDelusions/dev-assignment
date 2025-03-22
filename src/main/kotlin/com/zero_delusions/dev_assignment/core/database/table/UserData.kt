@@ -1,6 +1,8 @@
 package com.zero_delusions.dev_assignment.core.database.table
 
 import jakarta.persistence.*
+import java.nio.ByteBuffer
+import java.util.UUID
 
 @Entity
 @Table(name = "user_data")
