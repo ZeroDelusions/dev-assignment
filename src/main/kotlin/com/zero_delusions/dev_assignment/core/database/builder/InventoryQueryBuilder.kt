@@ -31,7 +31,7 @@ class InventoryQueryBuilder {
             require(itemId != null && itemId!!.isNotEmpty()) { "Item identifier must be specified" }
 
             val hql = when(inventoryType) {
-                InventoryType.ALL -> buildQueryForAllInventories(inventoryType.columnName!!)
+                InventoryType.ALL -> buildQueryForAllInventories()
                 else -> buildQueryForInventory(inventoryType.columnName!!)
             }
 
@@ -67,10 +67,10 @@ class InventoryQueryBuilder {
             """.trimIndent()
         }
 
-        private fun buildQueryForAllInventories(columnName: String): String {
+        private fun buildQueryForAllInventories(): String {
             return "FROM UserData u WHERE " + InventoryType.entries
                 .filter { it != InventoryType.ALL }
-                .joinToString(" OR ") { buildInventoryCondition(columnName) }
+                .joinToString(" OR ") { buildInventoryCondition(it.columnName!!) }
         }
 
         private fun buildQueryForInventory(columnName: String): String {
