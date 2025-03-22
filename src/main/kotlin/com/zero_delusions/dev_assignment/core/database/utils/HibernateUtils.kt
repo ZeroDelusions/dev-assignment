@@ -1,4 +1,4 @@
-package com.zero_delusions.dev_assignment.core
+package com.zero_delusions.dev_assignment.core.database.utils
 
 import org.hibernate.SessionFactory
 import org.hibernate.cfg.Configuration
