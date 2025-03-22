@@ -10,7 +10,7 @@ object InventoryService {
         return HibernateUtils.executeWithSession { session: Session ->
             InventoryQueryBuilder.query()
                 .withItem("minecraft:diamond_chestplate")
-                .withMinCount(64)
+                .withMinCount(minCount)
                 .execute(session)
         }
     }
