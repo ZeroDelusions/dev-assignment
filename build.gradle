@@ -2,7 +2,6 @@ plugins {
 	id 'fabric-loom' version '1.10-SNAPSHOT'
 	id 'maven-publish'
 	id "org.jetbrains.kotlin.jvm" version "2.1.20"
-	id "org.hibernate.orm" version "7.0.0.Beta5"
 }
 
 version = project.mod_version
@@ -44,6 +43,9 @@ dependencies {
 
 	// MariaDB jdbc driver
 	implementation 'org.mariadb.jdbc:mariadb-java-client:3.4.1'
+	// Hibernate
+	implementation "org.hibernate.orm:hibernate-core:7.0.0.Beta5"
+	implementation "jakarta.transaction:jakarta.transaction-api"
 }
 
 processResources {
