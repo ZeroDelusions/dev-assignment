@@ -11,6 +11,7 @@ object InventoryService {
             InventoryQueryBuilder.query()
                 .withItem("minecraft:diamond_chestplate")
                 .withMinCount(minCount)
+                .inInventory(InventoryQueryBuilder.InventoryType.ARMOUR)
                 .execute(session)
         }
     }
