@@ -54,4 +54,15 @@ data class UserData(
     override fun hashCode(): Int {
         return uuid.contentHashCode()
     }
+
+    // ---- Cutstom func ----
+    fun getJavaUUID(): UUID? {
+        uuid?.let {
+            val bb = ByteBuffer.wrap(it)
+            val mostSignificantBits = bb.getLong()
+            val leastSignificantBits = bb.getLong()
+            return UUID(mostSignificantBits, leastSignificantBits)
+        }
+        return null
+    }
 }
