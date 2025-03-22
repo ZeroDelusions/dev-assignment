@@ -61,8 +61,8 @@ class InventoryQueryBuilder {
                     ) as items
                     WHERE items.item_data IS NOT NULL 
                     AND JSON_EXTRACT(items.item_data, '$.id') = :itemId
-                    ${if (minCount > 0) "AND JSON_EXTRACT(items.item_data, '$.count') > $minCount " else ""}            
-                    ${if (maxCount < Int.MAX_VALUE) "AND JSON_EXTRACT(items.item_data, '$.count') < $maxCount " else ""}            
+                    ${if (minCount > 0) "AND JSON_EXTRACT(items.item_data, '$.count') >= $minCount " else ""}            
+                    ${if (maxCount < Int.MAX_VALUE) "AND JSON_EXTRACT(items.item_data, '$.count') =< $maxCount " else ""}            
                 )
             """.trimIndent()
         }
