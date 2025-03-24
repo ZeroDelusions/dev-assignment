@@ -1,8 +1,9 @@
 package com.zero_delusions.dev_assignment
 
+import com.zero_delusions.dev_assignment.core.command.DevAssignmentCommands
 import com.zero_delusions.dev_assignment.core.database.service.InventoryService
-import com.zero_delusions.dev_assignment.core.database.utils.HibernateUtils
 import net.fabricmc.api.ModInitializer
+import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback
 import org.slf4j.LoggerFactory
 
 object DevAssignment : ModInitializer {
