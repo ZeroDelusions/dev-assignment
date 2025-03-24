@@ -10,7 +10,7 @@ object DevAssignment : ModInitializer {
     private val logger = LoggerFactory.getLogger(MOD_ID)
 
 	override fun onInitialize() {
-		val users = InventoryService.findUsersWithDiamondChestplates(10)
+		val users = InventoryService.findUsersWithDiamondChestplates(64)
 		println("Users with 64 diamond chestplates: ${users.size}")
 		users.forEach { user ->
 			println("UUID: ${user.getJavaUUID()}")
