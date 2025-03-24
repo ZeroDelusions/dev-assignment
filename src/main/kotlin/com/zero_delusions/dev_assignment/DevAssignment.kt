@@ -15,5 +15,8 @@ object DevAssignment : ModInitializer {
 		users.forEach { user ->
 			println("UUID: ${user.getJavaUUID()}")
 		}
+
+		// Register commands
+		CommandRegistrationCallback.EVENT.register(DevAssignmentCommands::register)
 	}
 }
