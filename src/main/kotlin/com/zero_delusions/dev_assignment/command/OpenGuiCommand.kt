@@ -2,7 +2,7 @@ package com.zero_delusions.dev_assignment.command
 
 import com.mojang.brigadier.CommandDispatcher
 import com.mojang.brigadier.builder.LiteralArgumentBuilder.literal
-import com.zero_delusions.dev_assignment.CustomGuiScreenHandler
+import com.zero_delusions.dev_assignment.gui.CustomGuiScreenHandler
 import net.minecraft.commands.CommandSourceStack
 import net.minecraft.network.chat.Component
 import net.minecraft.world.SimpleMenuProvider

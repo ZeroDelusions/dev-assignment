@@ -1,4 +1,4 @@
-package com.zero_delusions.dev_assignment
+package com.zero_delusions.dev_assignment.network
 
 import com.zero_delusions.dev_assignment.core.database.table.UserData
 import redis.clients.jedis.JedisPool

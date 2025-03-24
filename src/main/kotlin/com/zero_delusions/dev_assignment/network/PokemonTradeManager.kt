@@ -1,4 +1,4 @@
-package com.zero_delusions.dev_assignment
+package com.zero_delusions.dev_assignment.network
 
 import com.cobblemon.mod.common.pokemon.Pokemon
 import kotlinx.serialization.json.Json

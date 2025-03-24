@@ -1,4 +1,4 @@
-package com.zero_delusions.dev_assignment
+package com.zero_delusions.dev_assignment.gui
 
 import net.minecraft.core.component.DataComponents
 import net.minecraft.world.Container
