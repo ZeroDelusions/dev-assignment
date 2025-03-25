@@ -17,14 +17,12 @@
 	"entrypoints": {
 		"main": [
 			{
-				"value": "com.zero_delusions.dev_assignment.DevAssignment",
-				"adapter": "kotlin"
+				"value": "com.zero_delusions.dev_assignment.DevAssignment"
 			}
 		],
 		"client": [
 			{
-				"value": "com.zero_delusions.dev_assignment.DevAssignmentClient",
-				"adapter": "kotlin"
+				"value": "com.zero_delusions.dev_assignment.DevAssignmentClient"
 			}
 		]
 	},
@@ -39,8 +37,7 @@
 		"fabricloader": ">=0.16.10",
 		"minecraft": "~1.21.1",
 		"java": ">=21",
-		"fabric-api": "*",
-		"fabric-language-kotlin": "*"
+		"fabric-api": "*"
 	},
 	"suggests": {
 		"another-mod": "*"
